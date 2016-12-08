@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ========= Renamed the header tag for each webpage =================-->
+  <title>Education</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- ================= An icon assigned as my logo on header tag on each webpage ====================-->
+  <link rel="shortcut icon" href="valentine.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  
+<!-- ================ Navigation bar with active on webpage user is currently on =========================== -->
+<nav class="navbar navbar-inverse">
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html">Work</a></li>
+	<li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Education <span class="caret"></span></a>
+        <ul class="dropdown-menu"></li>
+          <li><a href="#">University</a></li>
+          <li><a href="#">Training</a></li>
+         </ul>	
+   	<li><a href="projects.html">Projects</a></li>
+	</ul>
+	
+<!-- ============================ Using script for dynamic real time function ========================= -->
+
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+
+<!-- ============== Body section for education html page starts here ============= -->
+<body>
+<ul class="breadcrumb">
+    <!--li><a href="#">Home</a></li-->
+    <!--li><a href="#">Work</a></li-->
+    <li class="active"><a href="#">Education</a></li>
+    <!--li><a href="#">Projects</a></li-->
+  </ul></nav>
+  
+<!-- ================ Dynamic by loading up the script time function in real time and in the centre of the screen ============== -->
+<body onload="startTime()"><div style="text-align:center"> 
+<div id="txt"></div></div>
+
+<!--========================== Main content of the webpage ==========================-->
+<div class="container" style="margin-top:50px">
+
+<!-- ##### -->
+
+<!-- ==================================== BS Accordion with Collapsible elements assigned here ============== -->
+<div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <!--h4 class="panel-title"-->
+          
+		<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Institute of Technology in Tallaght:  2013- 2017.  <i>Click here to bring the list up</i></a>
+<!-- ============================ External website links embedded where indicated ===================== -->   
+		</h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">Currently, undertaking BSc Hons. in IT Management<p>Obtained: BSc in IT Management 2016</p></div>
+		<img id ="img3" src="itt.jpg" alt="img3" width="400px" height="200px" align="right"/>
+		<br><b>Year 2017</b>
+		<li>Networking 4</li>
+		<li>IT Governance & Quality</li>
+		<li>Enterprise Database Technologies</li>
+		<li>Operations Research</li>
+		<li>Project part 2</li>
+			
+		<br><b>Year 2016-2017</b>
+		<li>Cloud Architecture</li>
+		<li>Interactive Media Design</li>
+		<li>Enterprise Applications Architecture</li>
+		<li>Information Management</li>
+		<li>Social Media Analysis Information Integration</li>
+		<li>Project part 1</li>
+	
+		<br><b>Year 2015-2016</b>
+		<li>Networking 3</li>
+		<li>Advanced Database</li>
+		<li>Cloud & Distributed</li>
+		<li>Operating Systems</li>
+		<li>Innovation & Enterprise</li>
+		<li>Wed Development & Design</li>
+		<li>Project and Work Placements</li>
+		
+		<br><b>Year 2014-2015</b>
+		<li>Networking 2</li>
+		<li>Object Orientated Analysis & Design</li>
+		<li>Information Security</li>
+		<li>Management Scienece</li>
+		<li>Financial Management</li>
+		<li>Database Administration (Oracle)</li>
+		
+		<br><b>Year 2014-2015</b>
+		<li>Networking 1</li>
+		<li>Software Quality Assurance & Testing</li>
+		<li>Web Design and Development</li>
+		<li>Computer Services Management</li>
+		<li>Discrete Math 2</li>
+		<li>Database Design and Planning</li>
+		
+		<br><b>Year 2013-2014</b>
+		<li>Object Oriented System Analysis</li>
+		<li>Operating Systems Fundamental</li>
+		<li>Software Development II (Java)</li>
+		<li>Statistics</li>
+		<li>Database Fundamentals</li>
+		<li>Social Media Communications</li>
+		
+		<br><b>Year 2013-2014</b>
+		<li>Fundamentals of Interface and Web Design</li>
+		<li>Software Development I (Java)</li>
+		<li>Discrete Maths 1</li>
+		<li>Business and Information Systems</li>
+		<li>Business and Information Systems</li>
+		<li>Computer Architecture (MicroSim etc)</li>
+		<br><p><i><a href="http://www.it-tallaght.ie/">To visit website click here ... </a></i></p>
+		</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Greenhills College:  2011- 2013</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+							<img id ="img3" src="greenhills.jpg" alt="img3" width="230px" height="150px" align="right"/>
+								<li>Networks and Software Systems FETAC 6 Java, C+, Visual Studio </li>
+								<li>Comptia +A</li>
+								<li>PC Maintenance and Servicing FETAC 5</li>
+								<br><p><i><a href="http://greenhillscollege.ie/secondary/home.html">To visit website click here ... </a></i></p>
+      	
+		</div>
+	  </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">NHS Management Training: 2000 to 2006</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+			<img id ="img3" src="nhs.jpg" alt="img3" width="230px" height="100px" text-align="right"/>
+			<b>NHS Management Training Programme: </b></div>
+      <li>National Vocational Qualification (NVQ) Manager - level 3</li>
+	  <li>NVQ level 1 Admin</li>
+	  <li>NVQ Assessor A1</li>
+	  <li>Management Training Programme: Recruitment and Selection; Mentoring Skills; Absenteeism Policy; Career Management, etc.</li>
+	  
+	  <br><br><p><i><a href="http://www.clch.nhs.uk/services/community-neuro-rehabilitation.aspx">To visit website click here ... </a></i></p>
+	  </div>
+    </div>
+  </div> 
+</div>
+
+<footer align="center"><b>Copyright &copy; Ramona Valentine MMXVI</b></footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,569 @@
+/*style.css*/
+body
+	{
+		background-color: #c6c6b3;
+	}
+#Container
+	{
+		width:900px; 
+		height:880px; 
+		overflow:auto;
+		margin-left: auto; 
+		margin-right: auto; 
+		background-color:#f5f5f5;
+		box-shadow:0px 0px 15px 5px #a5a5a5;
+		font:bold 14px Georgia,serif; 
+		color: #0000cc;
+	}
+#Logo /* Logo on the top of the page */
+	{
+		position:relative; 
+		top:-20px; 
+		height:150px; 
+		background-color:#a5a5a5;
+	}
+#LogoImg /* image of the building on the logo */
+	{
+		width:470px; 
+		height:150px; 
+		float:right;
+	}
+#LogoText /* name of the website */
+	{
+		float:left; 
+		padding-left:10px; 
+		padding-right:10px; 
+		padding-top:10px; 
+		color:#fff00f; 
+		font:bold 30px Georgia,serif;
+	}	
+#TopTextIndex /* small writing on the Logo */
+	{
+		position:absolute;
+		top:60px;
+		padding:10px;
+		font:14px Georgia,serif;
+		-moz-animation: slide 1s;
+		-webkit-animation: slide 1s;
+		animation: slide 1s ;
+		
+}
+ 
+	
+	@keyframes slide{
+    10% {line-height:50%;font:bold 1px Georgia,serif;}
+	100% {line-height:150%;font:bold 14px Georgia,serif;}	
+}
+    @-webkit-keyframes slide{
+    10% {line-height:50%;font:bold 1px Georgia,serif;}
+	100% {line-height:150%;font:bold 14px Georgia,serif;}	
+}
+	@-moz-keyframes slide{
+    10% {line-height:50%;font:bold 1px Georgia,serif;}
+	100% {line-height:150%;font:bold 14px Georgia,serif;}	
+}
+		
+/* ====================== Navigation =================================== */
+
+#Navigation /* Position of the navigation menu */
+	{
+		position:relative;
+		top:-30px;left:100px;
+		width:750px;z-index:1;
+	}
+#Navigation a:active 
+	{
+		color: #ff0000; /* change colour of the text when menu link is clicked */
+		
+	}
+#Navigation a:focus
+	{
+		background:#a5a5a5; 
+	}
+#Navigation ul 
+	{ 
+		list-style: none;
+		text-align:center; 
+		font-size:12px;
+		 
+	}
+#Navigation ul li 
+	{
+		float:left; 
+		padding-right:2px; 
+		position:relative;
+		width: 120px; 
+		height: 30px; 
+	}
+#Navigation ul a 
+	{ 
+		display: table-cell; 
+		vertical-align: middle; 
+		width: 120px; 
+		height: 30px; 
+		background:#c6c6b3;
+		color:#056;
+		text-decoration:none; 
+	 } 
+#Navigation ul a:hover 
+	{ 
+		background:#a5a5a5; 
+	}
+#Navigation li > ul 
+	{ 
+		display:none; 
+		position:absolute; 
+		left: 0;
+		top: 100%; 
+		font-size:12px 
+	}
+#Navigation li:hover > ul
+	{ 
+		display:block; 
+	}
+#Navigation li > ul li 
+	{ 
+		padding: 0;
+		padding-top: 2px; 
+	}
+#Navigation li > ul li > ul 
+	{ 
+		left: 100%;
+		top: 0; 
+		padding-left: 2px; 
+	}
+#Navigation li > ul li > ul li 
+	{ 
+		width: 100px; 
+		font-size:12px 
+	}
+#Navigation li:hover > a 
+	{
+		background:#a5a5a5; 
+	}
+	
+/* ====================== Content ========================== */
+
+#Content	
+	{
+		position:relative;
+		top:5px;
+		margin-left:5px;
+		height:auto;
+		margin-left: auto; 
+	}
+
+#TopImages /* images in the Index Page */
+	{
+		display:inline-table;
+		margin-left:60px;
+        margin-top:30px;
+	}
+
+#img1:hover,#img2:hover,#img3:hover /* images in the Index Page */
+	{
+		width:255px;
+		height:205px;
+		box-shadow:0px 0px 15px 5px #990099;
+		animation:turn 2s; /* Had to turn off infinite cose titles not showing very good */
+		animation-timing-function:linear;
+		-moz-animation:turn 2s ;
+		-moz-animation-timing-function:linear;
+		-webkit-animation:turn 2s ;
+		-webkit-animation-timing-function:linear;
+	}
+
+#img1,#img2,#img3 /* images in the Index Page */
+	{
+		width:250px;height:200px;
+	}
+
+#MainTextIndex /* Text in the Index Page */
+	{
+		padding-left:30px;
+		padding-right:10px;
+		padding-bottom:5px;
+		display:inline-table;
+		border-bottom:1px solid #990099;		
+		margin-left:60px;
+		margin-right:70px;
+        margin-top:50px;
+		line-height:180%;
+	}
+
+.MainTextIndexBottom /* Text on the bottom of the Index and Graphs (table 2) */
+	{
+		margin-top:30px;
+		text-align:center;
+		color:#990099;
+		font:bold 16px Georgia,serif;
+	}
+	
+.Breadcrumbs
+	{
+		position:relative;
+		left: -630px;
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		box-shadow:0 0 2px .5px #000000;
+		padding-left:10px;
+		padding-right:5px;
+		background-color: #f5f5f5;
+		margin-top:30px;
+		
+	}
+#Breadcrumbs
+	{
+		position:relative;
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		box-shadow:0 0 2px .5px #000000;
+		padding-left:10px;
+		padding-right:5px;
+	}
+#Breadcrumbs a
+{
+text-decoration:none;
+}
+.Breadcrumbs a
+	{
+		text-decoration:none;
+	}
+
+/* =================== Ward page =============================== */
+#WardsTextTop
+	{
+		text-shadow:1px 1px yellow;
+		padding-left:10px;
+		font:bold 18px Georgia,serif; 
+	}
+#WardLinks
+	{
+		position:relative;
+		float:left;
+		top:30px;
+		height:90%;
+		width:60%;
+	}
+#WardLinks ul a
+	{
+		height: 30px; 
+		text-decoration:none;
+	}
+#WardLinks ul li
+	{
+		padding:15px;
+		margin-bottom:2px;
+		background-color:#D8D8A0;
+		list-style-type: none; 
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		border-top-left-radius:1em;
+		border-bottom-left-radius:1em;
+	}
+#WardLinks ul li:hover 
+	{ 
+		background:#a5a5a5; 
+	}
+
+#Uncle /* picture of a man */
+	{
+		position:relative;
+		top:70px;
+		margin-right:20px;
+		float:right;
+		width:300px;
+		height:350px;
+	}
+/* ====================== Facts page ====================== */
+
+#Facts /* text on this page */
+	{
+		position:relative;
+		float:left;
+		top:15px;
+		padding:10px;
+		width:500px;
+		height:auto;
+		box-shadow:0 0 5px 1px #a5a5a5;
+		margin-left:10px;
+	}
+#Link1,#Link2
+	{
+		position:relative;
+		float:right;
+		top:5px;
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		border-top-left-radius:1em;
+		border-bottom-left-radius:1em;
+		box-shadow:0 0 5px 1px #a5a5a5;
+		padding-top:2px;
+		padding-bottom:2px;
+		width:100px;
+		text-align:center;
+	}
+#Link2
+	{
+		margin-right:40px;
+	}
+#Link1
+	{
+		margin-right:90px;
+	}
+#Link1:hover,#Link2:hover
+	{
+		background-color:blue;
+		font:bold 16px Georgia,serif;
+	
+	}
+#Link1 a,#Link2 a
+	{
+		text-decoration:none;
+		color:#000;
+	}
+#Link1:hover a,#Link2:hover a
+	{
+		color:#fff;
+	}
+#Before /* img on the top */
+	{
+		float:right;
+		position:relative;
+		top:50px;
+		margin-right:50px;
+		height:225px;
+		width:225px;
+	}
+#After /* img on the bottom */
+	{
+		float:right;
+		position:relative;
+		top:70px;
+		margin-right:50px;
+		height:225px;
+		width:225px;
+	}
+
+/* ================ Responsibilities page ==================== */
+.Response
+	{
+		width:400px;
+		height:200px;
+		padding:15px;
+		box-shadow:0px 0px 5px 1px #a5a5a5;
+		line-height:170%;
+		margin-left:10px;
+	}
+.ResponseHeaders
+	{
+		font:bold 20px Georgia,serif;
+		color:#999966;
+	}
+.readMore 
+	{
+		text-decoration:none;
+		color:#999966;
+	}
+#ResponseLeft
+	{
+		float: left;
+	}
+#ResponseRight
+	{
+		float: right;
+		position:relative;
+		top:-15px;
+	}
+#readAll
+	{
+		position:relative;
+		top:-20px;
+		left:300px;
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		border-top-left-radius:1em;
+		border-bottom-left-radius:1em;
+		box-shadow:0 0 5px 1px #a5a5a5;
+		padding-left:10px;
+		padding-right:10px;
+		padding-top:3px;
+		padding-bottom:3px;
+		text-align:center;
+		text-decoration:none;
+	}
+#readAll:hover
+	{
+		background-color:blue;
+		color:#fff;
+		text-decoration:none;
+	}
+
+/* =============== Read page ============================= */
+.Read
+	{
+		box-shadow:0px 0px 5px 1px #a5a5a5;
+		padding:20px;
+		padding-bottom:30px;
+		margin-left:20px;
+		margin-right:20px;
+		line-height:150%;
+	}
+.Header
+	{
+		font:bold 20px Georgia,serif;
+		color:#999966;
+	}
+.ArrowUp /* images of arrows */
+	{
+		width:30px;
+		height:30px;
+		border:none;
+	}
+/* ================== statistics page (table 1)================ */
+#Stats
+	{
+		margin-top:20px;
+		width:850px;
+		margin-left:20px;
+	}
+/* ================== graphs page (table 2)================ */
+#TableGraphs ,#Seesaw
+	{
+		height:200px;
+		width:400px;
+		margin-top:50px;
+		margin-left:240px;
+	}
+#TableGraphs:hover,#Seesaw:hover
+	{
+		height:500px;
+		width:700px;
+		margin-left:100px;
+	}
+#TableGraphs td,#TableGraphs th
+{
+border:3px solid blue;
+}
+
+td
+	{
+		padding-left:10px;
+	}
+h2
+	{
+		position:relative;
+		top:30px;
+		margin-left:100px;
+	}
+h3
+	{
+		font:bold 14px arial, Hervetica;
+		line-height:140%;
+	}
+/* ===================== Footer ============================== */
+#Footer
+	{
+		position:fixed;
+		bottom:1px;
+		color:#fff;
+		width:100%;
+		height:50px;
+		background-color:#a5a5a5;
+		box-shadow:0px 0px 15px 5px #a5a5a5;
+	}
+
+#NavigationFooter ul 
+	{ 
+	position:relative;
+	top:-30px;
+	margin-left:350px;
+	
+		list-style: none; 
+		text-align:center; 
+		font:bold 14px Georgia,serif;
+	}
+#NavigationFooter ul li 
+	{ 
+		float:left;
+		padding-right:2px; 
+		width: 120px; 
+		height: 30px; 
+	}
+#NavigationFooter ul a
+	{ 
+		display: table-cell;
+		vertical-align: middle; 
+		width: 120px;
+		height: 30px; 
+		color:#056;
+		text-decoration:none; 
+	} 
+#NavigationFooter ul a:hover 
+	{ 
+		background:#d6d6d6; 
+	}
+#NavigationFooter li > ul 
+	{ 
+		display:none; 
+		position:absolute; 
+		left: 0;
+		top: 100%;
+		font-size:12px 
+	}
+#NavigationFooter li:hover > ul
+	{ 
+		display:block; 
+	}
+	
+#img4,#img5,#img6 /* Images in the footer */
+	{
+		padding-left:2px;
+		padding-right:2px;
+		height:50px;
+		display:inline;
+		float:right;
+		position:relative;
+		top:-30px;
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		border-top-left-radius:1em;
+		border-bottom-left-radius:1em;
+	}
+#img6
+	{
+		margin-right:10px;
+	}
+#img4:hover,#img5:hover,#img6:hover
+	{
+		animation:turn 3s; /* Had to turn off infinite cose titles not showing very good */
+		animation-timing-function:linear;
+		-moz-animation:turn 3s infinite;
+		-moz-animation-timing-function:linear;
+		-webkit-animation:turn 3s infinite;
+		-webkit-animation-timing-function:linear;
+	}
+	
+	@keyframes turn
+	{
+	from {transform:rotateY(0deg);}
+	to {transform:rotateY(360deg);}
+	}
+	
+	@-moz-keyframes turn 
+	{
+	from {-moz-transform:rotateY(0deg);}
+	to {-moz-transform:rotateY(360deg);}
+	}
+	
+	@-webkit-keyframes turn 
+	{
+	from {-webkit-transform:rotateY(0deg);}
+	to {-webkit-transform:rotateY(360deg);}
+	}
+	
+	@-ms-keyframes turn 
+	{
+	from {-ms-transform:rotateY(0deg);}
+	to {-ms-transform:rotateY(360deg);}
+	}

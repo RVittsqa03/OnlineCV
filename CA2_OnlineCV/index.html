@@ -1,0 +1,325 @@
+<!-- =========================== Ramona Valentine X00114375 CA2 Dec 2016 ======================== -->
+<!--Lecturer: Ben Walsh === Subject: Interactive Media Design =================================== -->
+<!-- ========================Using Bootstrap 3.3.7, Javascript, HTML 5, CSS, GitHub to host website ===== -->
+<!-- ========================
+
+<!DOCTYPE html>
+<!-- ======= select Language use for html ==== -->
+<html lang="en">
+<!-- ============ Head up section of all the imports from external websites embedded in here and links within this website referenced to here ========= -->
+<head>
+
+<!-- ========= Renamed the header tag for each webpage =================-->
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- ================= An icon assigned as my logo on header tag on each webpage ====================-->
+  <link rel="shortcut icon" href="valentine.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+<!--======================= Navigation on menu bar to take user to any of the webpage of this website plus Contact ... see bottom of index page for Modal section ================-->
+<!--========= Background colour of this navigation and justified across width of screen =========-->
+<nav class="navbar navbar-inverse">
+  <ul class="nav nav-pills nav-justified">
+    <li class="active"><a href="index.html">Home</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="education.html">Education</a></li>
+   	<li><a href="projects.html">Projects</a></li>
+	
+	<!-- Trigger the modal with a button -->
+	<li><button type="button" class="btn btn-info btn-sm" id="myBtn"><a href="#">Contact Form
+	</a></button></li>
+	</ul>
+  </head>
+
+<!-- =========== Main body of index html page and also colour of background as grey =====-->
+<body>
+
+<!-- ========================= Breadcrumb section - useful for dropdown within the same webpage.  Can also link to other webpage but this is not assigned here.=======-->
+<!--================ Left side additional webpage using checklist tool.  Hope to assign a button with a popup message confirming what has been checked. ========= -->
+<ul class="breadcrumb">
+	<a href="checklist.html">Click here for CA2 checklist ... else return to </a><a href="index.html">Home</a>
+    <!--li class="#">Work</li>
+    <li><a href="#">Education</a></li>
+    <li><a href="#">Projects</a></li-->
+  </ul></nav>
+
+<!-- ================= BS Success Alert message embedded. Click on X and will close alert message ========= -->
+<div class="alert alert-success alert-dismissable fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> You have come to the right place. Please click on x to close this alert message.
+</div>
+
+<!--====Apologies for putting these in here.  They did work in style.css but it didn't work anymore so I pulled it all into here for now =========-->
+<!--====Most of the images related .css are in here as well as in .css - it does not seem to affect the html - of course I will see what happens in GitHub. =======--> 
+<!-- ==== first part is for the Modal form (the rest of the codes are actually working in .css so I left them over there instead ====-->
+<style>
+.modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;}
+	  	  
+<!--=====Section again for .css -- it is a Carousel of my photo on the index page when hovered over image.  It did work then it took over 36 hours to fix so I gave up ====== -->
+#TopImage /* image in the index Page */
+	{
+		display:inline-table;
+		margin-left:60px;
+        margin-top:30px;
+	}
+
+#img1:hover /* image in the index page */
+	{
+		width:160px;
+		height:145px;
+		box-shadow:0px 0px 15px 5px #990099;
+		animation:turn 2s; /* Had to turn off infinite cose titles not showing very good */
+		animation-timing-function:linear;
+		-moz-animation:turn 2s ;
+		-moz-animation-timing-function:linear;
+		-webkit-animation:turn 2s ;
+		-webkit-animation-timing-function:linear;
+	}
+	@keyframes turn
+	{
+	from {transform:rotateY(0deg);}
+	to {transform:rotateY(360deg);}
+	}
+	
+	@-moz-keyframes turn 
+	{
+	from {-moz-transform:rotateY(0deg);}
+	to {-moz-transform:rotateY(360deg);}
+	}
+	
+	@-webkit-keyframes turn 
+	{
+	from {-webkit-transform:rotateY(0deg);}
+	to {-webkit-transform:rotateY(360deg);}
+	}
+	
+	@-ms-keyframes turn 
+	{
+	from {-ms-transform:rotateY(0deg);}
+	to {-ms-transform:rotateY(360deg);}
+	}
+<!--/* ======================= Social media images would do a carousel when mouse is hovered over.  Again did work and then I changed something and this stopped working ============ */
+/* ======================= I moved around alot of the navigation bar inverse and it changes the whole layout removing, placing elsewhere and adding so I have left it but this part now stops working ============ */-->
+
+#NavigationFooter ul a:hover 
+	{ 
+		background:#d6d6d6; 
+	}
+#NavigationFooter li > ul 
+	{ 
+		display:none; 
+		position:absolute; 
+		left: 0;
+		top: 100%;
+		font-size:12px 
+	}
+#NavigationFooter li:hover > ul
+	{ 
+		display:block; 
+	}
+	#img2,#img3,#img4,#img5,#img6,#img7,#img8/* image in the footer */
+	{
+		padding-left:2px;
+		padding-right:2px;
+		height:50px;
+		display:inline;
+		float:right;
+		position:relative;
+		top:-30px;
+		border-top-right-radius:1em;
+		border-bottom-right-radius:1em;
+		border-top-left-radius:1em;
+		border-bottom-left-radius:1em;
+	}
+#img2
+	{
+		margin-right:10px;
+	}	
+<!-- Again should be in style.css but these are relating to the social media images ... I will start from scratch after upload before using the online CV ====-->
+<!-- ===== it is a Carousel of each social media links on the index page when hovered over image. =====-->
+	#img2:hover, #img3:hover,#img4:hover,#img5:hover,#img6:hover,#img7:hover,#img8:hover
+	{
+		animation:turn 3s; /* Had to turn off infinite as title not showing very good */
+		animation-timing-function:linear;
+		-moz-animation:turn 3s infinite;
+		-moz-animation-timing-function:linear;
+		-webkit-animation:turn 3s infinite;
+		-webkit-animation-timing-function:linear;
+	}
+	
+	@keyframes turn
+	{
+	from {transform:rotateY(0deg);}
+	to {transform:rotateY(360deg);}
+	}
+	
+	@-moz-keyframes turn 
+	{
+	from {-moz-transform:rotateY(0deg);}
+	to {-moz-transform:rotateY(360deg);}
+	}
+	
+	@-webkit-keyframes turn 
+	{
+	from {-webkit-transform:rotateY(0deg);}
+	to {-webkit-transform:rotateY(360deg);}
+	}
+	
+	@-ms-keyframes turn 
+	{
+	from {-ms-transform:rotateY(0deg);}
+	to {-ms-transform:rotateY(360deg);}
+	}
+</style>
+ <!--======= End of all those .css codes the rest are as usual ========================--> 
+<!-- ============================== Top right Search box (text input and click on glyphicon) returns nothing yet ========== -->	
+	<form class="navbar-form navbar-right">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn"> 
+
+<!-- ============================= Javascript for tooltip function when hovered over glyphicon.  This script should be in .js file ============== -->
+<script>
+$(document).ready(function(){
+    $('.btn').tooltip({title: "Click me"}); 
+});
+</script>
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+ 
+<!-- ========== Jumbotron static area with BS Carousel on the image itself when hovered over it and colour of this area as blue ================= -->
+<div class="jumbotron text-center">
+	<div class="container-fluid" style="background-color:#2196F3;color:#fff;height:290px;">
+		<div id="TopImage">
+				<h2>Ramona Valentine</h2><img id="img1" src="photoself.jpg" class="img-rounded" alt="img1" width="160" height="145"/>
+			<h3>ITT Student</h3>
+		</div>
+</div></div>
+
+<!-- ====================== Container for next row class with collapsible under each image, very brief summary.  Image takes you to its webpage of that subject.===========-->
+<div class="container" style="margin-top:0px">
+<!--div class="container"-->
+<div class="row">
+<div class="col-sm-4">
+      <p><i>Click image for this webpage ...</i></p><a href="work.html"><img src="img_wp.jpg" class="img-circle" alt="Chania" width="260" height="145"></a>
+	    <div data-toggle="collapse" data-target="#demo">
+			<h3><ul class="list-inline">
+		    <li><a data-toggle="tooltip" data-placement="top" title="Click here for Work page"></a></li>
+				<span class="glyphicon glyphicon-briefcase"></span>    <abbr title="Click here for brief summary">RECENT WORK</abbr>
+		</div></h3>
+      <div id="demo" class="collapse">
+			<p>A list of all work employment ending with a recent work placement as an IT Support Engineer, between Feb-Aug 2016, at CareWorks in Sandyford.  To see previous work please click on the link below.</p>
+			<p><i><a href="work.html">    See more ...</a></i></p>
+	  </div>
+</div></ul>
+<div class="col-sm-4">
+      <p><i>Click image for this webpage ...</i></p><a href="education.html"><img src="img_itt.jpg" class="img-circle" alt="Chania" width="260" height="145"></a>
+		<div data-toggle="collapse" data-target="#demo1">
+			<h3><span class="glyphicon glyphicon-education"></span>    <abbr title="Click here for brief summary">EDUCATION</abbr>
+		</div></h3>
+	  <div id="demo1" class="collapse"><p>This section lists the last 6 years of education in Dublin, Ireland. Presently, I am now doing my BSc.Hons. IT Management 2013-2016/7 Institute of Technology in Tallaght.  To see previous education and training please click on the link below.</p>
+			<p><i><a href="education.html">    See more ...</a></i></p>
+	</div>     
+</div>
+<div class="col-sm-4">
+  <p><i>Click image for this webpage ...</i></p><a href="projects.html"><img src="img_projects.jpg" class="img-circle" alt="Chania" width="260" height="145"></a>
+		<div data-toggle="collapse" data-target="#demo2">
+			<h3><span class="glyphicon glyphicon-tasks"></span>    <abbr title="Click here for brief summary">PROJECTS</abbr>
+	    </div></h3>
+		<div id="demo2" class="collapse"><p>Here are some selected projects listed in here.  There are 3 listed and both are Reports-based.  I hope to get both links to actual projects.  Meanwhile please click on below link to see my other Hobbies as well.</p>
+			<p><i><a href="projects.html">    See more ... </a></i></p>
+		</div>
+	</div>
+</div>
+
+<!-- ================== Footer of index page with social media links and hover features assigned with BS Carousel assigned to each image =================-->
+<div class="container" style="margin-top:50px">
+<div id="Footer">
+<div id="NavigationFooter">
+		<ul><a class="active" href="https://www.linkedin.com/in/ramona-valentine-53910579?trk=nav_responsive_tab_profile"><img id="img2" src="linkedin.jpg" alt="img2" width="40px" height="40px" title="LinkedIn"/></a>
+		   <a href="https://github.com/RVittsqa03"><img id ="img3" src="github.jpg" alt="img3" width="40px" height="40px" title="GitHub" /></a>
+		   <a href="https://www.meetup.com/members/143541992/"><img id="img4" src="meetup.jpg" alt="img4" width="40px" height="40px" title="Meetup"/></a>
+		   <a href="https://www.facebook.com/ramona.valentine.58"><img id="img5" src="facebook.jpg" alt="img5" width="40px" height="40px" title="Facebook"/></a>
+		   <a href="https://twitter.com/rosebud2471"><img id="img6" src="twitter.jpg" alt="img6" width="40px" height="40px" title="Twitter"/></a>
+		   <a href="https://www.youtube.com/watch?v=GDQNC7PGGx8"><img id="img7"src="youtube.jpg" alt="img7" width="40px" height="40px" title="Youtube"/></a>
+		   <a href="https://www.instagram.com/rosebud2471/"><img id="img8" src="instagram.jpg" alt="img8" width="40px" height="40px" title="Instagram"/></a>
+		  </ul>
+		<i>Copyright &copy; Valentine 2016</i>  
+	</div></div></div>
+
+	
+<!-- ================================= BS Modal popup Form ======================================= */-->
+<!-- ================= Modal Header section ================== -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header" style="padding:35px 50px;">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4><span class="glyphicon glyphicon-lock"></span> Query request form</h4>
+			</div>
+<div class="modal-body" style="padding:40px 50px;">
+<form role="form">
+ <!--==================== Modal Input form section (can input text but no popup yet) ==================== -->
+ <form>
+    <div class="form-group">
+		<div class="input-group">
+			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+				<input type="fullName" class="form-control" id="fullName" placeholder="Type in your full name">
+		</div>
+	</div>
+		<div class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+					<input type="address" class="form-control" id="address" placeholder="Type in your full home address">
+			</div>
+		</div>
+	<div class="form-group">
+		<label for="comment">Comment:</label>
+			<textarea class="form-control" rows="5" id="comment"></textarea>
+	</div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+</form>
+	<button type="submit" class="btn btn-success btn-block">
+		<span class="glyphicon glyphicon-off"></span> Login
+	</button>
+ </form>
+</div>
+  <!-- ======================= Modal Footer section ====================== -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+	  </div>
+	  </div>
+
+<!-- ===========================  Javascript to use a ready n click function for Modal Form ================ -->
+<!-- ======== I was trying to use a GET Method so when user submit this form this gets sent to a server who will then respond back ... via .ASP or .PHP =====-->
+<script>
+	$(document).ready(function(){
+		$("#myBtn").click(function(){
+			$("#myModal").modal();
+    });
+});
+</script>
+<!-- ============ End of the body section of main index page ======== -->
+</body>
+<!-- ============ End of this webpage of index page ================= -->
+</html>
+

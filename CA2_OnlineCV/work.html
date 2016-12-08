@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ========= Renamed the header tag for each webpage =================-->
+  <title>Work</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- ================= An icon assigned as my logo on header tag on each webpage ====================-->
+  <link rel="shortcut icon" href="valentine.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+ 
+ <!-- ================ Navigation bar with active on webpage user is currently on =========================== -->
+<nav class="navbar navbar-inverse">
+  <ul class="nav nav-pills nav-justified">
+    <li><a href="index.html">Home</a></li>
+    <li class="active"><a href="#">Work</a></li>
+    <li><a href="education.html">Education</a></li>
+   	<li><a href="projects.html">Projects</a></li>
+	</ul>
+  </head>
+<!-- ============== Main body of work html page starts here =============== -->
+<body>
+<ul class="breadcrumb">
+    <!--li><a href="#">Home</a></li-->
+    <li class="active">Work</li>
+    <!--li><a href="#">Education</a></li>
+    <li><a href="#">Projects</a></li-->
+</ul></nav>
+  
+<!-- ==================== Retrying a carousel feature in here instead (this did not work in style.css but it should be in there) ======================== -->
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  height: 100px;
+  position: relative;
+  margin: auto;
+}
+
+<!--/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}-->
+
+<!--/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}-->
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 100px) {
+  .text {font-size: 11px}
+}</style>
+
+<!--=========Images set up in a Dynamic Slideshow ============-->
+  
+<div class="slideshow-container">
+
+<div class="mySlides fade"><div style="text-align:center">
+  <!--div class="numbertext">1 / 3</div-->
+  <img src="careworks.jpg" style="width:30%">
+  <!--div class="text">Work Placement in Sandyford, Dublin 2016</div-->
+</div></div>
+
+<div class="mySlides fade"><div style="text-align:center">
+  <!--div class="numbertext">2 / 3</div-->
+  <img src="nhs.jpg" style="width:30%">
+  <!--div class="text">Community Rehab Team full time in London 2000-2006</div-->
+</div></div>
+
+<div class="mySlides fade"><div style="text-align:center">
+  <!--div class="numbertext">3 / 3</div-->
+  <img src="spuc.jpg" width="100" height="120">
+  <!--div class="text" text align="center">Computer Assistant full time in Westminster, London 1991-2000</div-->
+</div></div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<!--===========Javascript for slide function assigned to run each image dynamically every 2 seconds =====-->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<!-- ============== BS Table created with tags td and tr and th =============== -->
+<div class="container" style="margin-top:50px">
+<table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th>Company, Location and Job Title</th>
+        <th>Year / Date</th>
+        <th><p align="center">Duties and Keyskills</p></th>
+      </tr>
+    </thead>
+	<div id="tasks">
+    <tbody>
+      <tr class="success">
+        <td><a href="https://www.careworks.co.uk/"><img id ="img3" src="careworks.jpg" alt="img3" width="100px" height="75px" text align="left"/><br><br><br><br><br><p align="justified">Careworks</a> <p>Sandyford,</p><p>Dublin, Ireland</p> <br>IT Support Engineer</p></td>
+        <td>Feb - Aug 2016</td>
+        <td><li>Screening and managing incidents; providing IT support</li>
+		<li>Provided first point of contact as 1st level support screening NEW incidents logged</li>
+		<li>Advanced Find on previous resolved incidents to related common issues</li>
+		<li>Incidents management using Microsoft Dynamics CRM 2011 – SLAs, Priorities etc</li>
+		<li>Communication updates and responses to customers and staff/team</li>
+		<li>Scheduled and established remote access connections to client sites through VMs</li>
+		<li>Adhered to security measures for passwords, etc with FOB keys and Citrix</li>
+		<li>Worked with team members to progress or close off incidents</li>
+		<li>Generated weekly reports of incident metrics and data analysed as part of Intern Project</li>
+		<li>Replicated, reproduced applications and servers for troubleshooting issues</li>
+		<li>Identified fixes and bugs attached to incidents for escalating to 2nd and 3rd level</li>
+		<li>Chase up consultants, 2nd and 3rd level for updates</li>
+		<li>Reviewed incidents and chase up with customer for information requests to issues raised</li>
+		<li>Initiated 1st level communication support to manage, support, train, and assist other team members  eg.1st level On Duty call; incident metrics reports; ownership of incidents, etc.</li>
+		<li>Daily warehouse reports to external customer during Engineer's absence, using SQL Server Management 2012</li>
+		<li>Analysed data of incidents and team members using Excel Pivotal tables and MS CRM</li>
+		<li>Other software applications used: Outlook, Skype for Business, Sharepoint, Office365</li>
+		<li>Produced "A Business Analysis of Incident Trends Report" (Oral presentation in college)</li>
+		<br>
+		</td>
+      </tr>
+      <tr class="warning">
+        <td><a href="http://www.clch.nhs.uk/services/community-neuro-rehabilitation.aspx"><img id ="img3" src="nhs.jpg" alt="img3" width="70px" height="45px" text align="right"/><br><br><br><br><p align="justified">NHS</a> <p>Kensington/Chelsea,</p><p>London, England</p> <br>Service Promotion Admin Manager</p></td>
+        <td>2000 - 2006</td>
+        <td><li>Managing lead for Admin team - support through Supervisions, PDPs, Management issues in meetings</li>
+		<li>Provided IT current and future training needs support to Community Rehabilitation Team department</li>
+		<li>Identifying related IT for Teams, Department and NHS's Strategic Plans</li>
+		<li>Authorised Budget signatory for Head of Department as secondary and also Budget lead for dept.</li>
+		<li>Reporting to senior managements within NHS, eg. HR, Finance, etc when assignments are completed</li>
+		<li>Setup Working Groups for Projects across NHS and lead/contribute/participate</li>
+		<li>Created and reviewed annually Dept's Induction Manual Folder which other Departments have implemented into theirs</li>
+		<li>Created and reviewed annually IT Training Manual, security, risks, how to ..., for our dept based on data protection and staff security.  New procedures, new systems and new measures are reviewed and implemented.</li>
+		<li>Recruited and Selected Admin staff to our department and to other department's requests.  I created tests for Interview stage process.</li>
+		<li>Collated statistics and evaluated them to analyse conclusion for reporting back at meetings</li>
+		<li>Collaborating with health professionals on their Service Plans</li>
+		<li>Travelling across different parts of London as part of my monitoring Admin as our department were spread out on five sites</li>
+		<li>Arranging and organising team awaydays</li>
+		<br>
+		</td>
+      </tr>
+      <tr class="danger">
+        <td><a href="https://www.spuc.org.uk/our-work"><img id ="img3" src="spuc.jpg" alt="img3" width="70px" height="65px" text align="left"/><br><br><br><br><p align="justified">SPUC</a> <p>Westminster,</p><p>London, England.</p><br>Computer Assistant</p></td>
+        <td>1991 - 2000</td>
+        <td><li>As a team of two in computer department, I did data input entries</li>
+		<li>Responsible for maintaining, updating Parliamentary MPs, Clergy and Members' records on Uniplex database</li>
+		<li>Creating UNIX queries from Uniplex for labels, envelopes and letters for the CEO in Manager's absence</li>
+		<li>Installing hardware drives and RAM added, then configuring Computer Systems on all pcs in Head Office</li>
+		<li>Installing and upgrading software applications</li>
+		<li>Troubleshooting IT issues for organisation</li>
+		<li>Training work experience and new staff onto computer system</li>
+		<li>Maintaining backup tapes(!) - daily, weekly and monthly</li>
+		<li>Event organiser and food for Members of Parliament at their end and in our office</li>
+		<li>Conference weekend organiser, on-duty call, 12-seater bus driver for staff</li>
+		<li>Spokesperson on behalf of the organisation</li>
+		<br>
+		</td>
+      </tr>
+    </tbody>
+	</div>
+  </table>
+</div>
+
+<!-- ============ End of body for work html page ============== -->
+</body>
+</html>
